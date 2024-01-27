@@ -72,4 +72,40 @@ public class GamePanel extends JPanel implements Runnable {
 
         g.dispose();
     }
+
+    public int getTILE_SIZE() {
+        return TILE_SIZE;
+    }
+
+    public int getMAX_SCREEN_COL() {
+        return MAX_SCREEN_COL;
+    }
+
+    public int getMAX_SCREEN_ROW() {
+        return MAX_SCREEN_ROW;
+    }
+
+    public int getSCREEN_WIDTH() {
+        return SCREEN_WIDTH;
+    }
+
+    public int getSCREEN_HEIGHT() {
+        return SCREEN_HEIGHT;
+    }
+
+    public int getFPS() {
+        return FPS;
+    }
+
+    public void setFPS(int FPS) {
+        this.FPS = FPS;
+    }
+
+    public Thread getAppThread() {
+        return appThread;
+    }
+
+    public void setAppThread(Thread appThread) {
+        this.appThread = appThread;
+    }
 }
