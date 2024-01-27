@@ -1,5 +1,7 @@
 package View;
 
+import View.GameMap.GameMapManager;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -15,6 +17,7 @@ public class GamePanel extends JPanel implements Runnable {
     private int FPS = 60;
 
     // SYSTEM
+    private final GameMapManager gameMapManager = new GameMapManager(this);
 
     // APP THREAD
     private Thread appThread;
@@ -69,6 +72,8 @@ public class GamePanel extends JPanel implements Runnable {
         super.paintComponent(g);
 
         Graphics2D g2 = (Graphics2D) g;
+
+        gameMapManager.draw(g2);
 
         g.dispose();
     }
